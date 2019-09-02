@@ -28,6 +28,7 @@ def data_formatting_time(cabs_data):
     # Extract hour and day of the week
     cabs_data['hour'] = cabs_data['time'].apply(lambda x: x.hour)
     cabs_data['day'] = cabs_data['time'].apply(lambda x: x.dayofweek)
+    cabs_data['minute'] = cabs_data['time'].apply(lambda x: x.minute)
     cabs_data['dayofmonth'] = cabs_data['time'].apply(lambda x: x.day)
     return cabs_data;
 
